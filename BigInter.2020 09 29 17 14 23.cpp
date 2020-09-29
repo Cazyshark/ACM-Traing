@@ -69,11 +69,10 @@ struct BigInteger {
 		return !(*this<b);
 	}
 	bool operator != (const BigInteger &b) const {
-		return b<*this||*this<b;
+		return b<*this||*this<b
 	}
-	bool operator == (const BigInteger &b) const {
-		return !(b<*this||*this<b);
-	}
+	bool operator == (const BigInteger &b) const{
+	return !(b<*this)}
 };
 
 ostream& operator << (ostream &out,const BigInteger &x ) {
@@ -97,6 +96,5 @@ istream& operator >> (istream &in,BigInteger& x) {
 int main() {
 	BigInteger a=1,b=1,c=1;
 	cout<<a+b+c<<endl;
-	cout<<(a>b)<<endl;
 	return 0;
 }
