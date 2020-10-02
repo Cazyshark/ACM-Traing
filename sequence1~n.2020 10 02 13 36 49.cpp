@@ -14,8 +14,8 @@ int  cnt=0;
 
 void print_permutation(int n,int *A,int cur){
 	if(cur == n){
-		//for(int i = 0;i < n;i++)printf("%d",A[i]);
-		//printf("\n");
+		for(int i = 0;i < n;i++)printf("%d",A[i]);
+		printf("\n");
 		cnt++;
 	}
 	else for(int i = 1 ; i <= n; i++){
@@ -30,13 +30,10 @@ void print_permutation(int n,int *A,int cur){
 }
 
 int main(){
-	int A[10]={0,1,2,3,4,5,6,7,8,9};
-	int n = 0;
+	int A[10]={1,2,3,4,5,6};
+	int n = 10;
 	int cur = 0;
-	for(int i =1;i<10;i++){
-		 cnt  = 0;
-		 print_permutation(i,A,cur);
-		 printf("case %d: %d\n",i,cnt);
-    }
+	print_permutation(5,A,cur);
+	printf("%d\n",cnt);
 	return 0;
 }
